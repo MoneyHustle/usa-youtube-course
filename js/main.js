@@ -2,6 +2,51 @@
 // USA COURSE - MAIN JAVASCRIPT
 // ============================================
 
+// Mobile Menu Toggle
+function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    navMenu.classList.toggle('active');
+    menuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+}
+
+// Close mobile menu when clicking nav links
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                menuBtn.textContent = '☰';
+            }
+        });
+    });
+});
+
+// Header scroll effects
+let lastScroll = 0;
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.animated-header');
+    const scrollLine = document.getElementById('scrollLine');
+    const currentScroll = window.pageYOffset;
+    
+    // Add scrolled class
+    if (currentScroll > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
+    // Update scroll indicator
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (currentScroll / windowHeight) * 100;
+    scrollLine.style.width = scrolled + '%';
+    
+    lastScroll = currentScroll;
+});
+
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
@@ -38,7 +83,7 @@ function openModal(type) {
         modalSubtitle.textContent = 'Start your YouTube journey today - completely free!';
         courseType.value = 'free';
     } else {
-        modalTitle.textContent = '👑 Get Premium Access';
+        modalTitle.textContent = '💎 Get Premium Access';
         modalSubtitle.textContent = 'Unlock the complete package - Rs. 499 only!';
         courseType.value = 'premium';
     }
