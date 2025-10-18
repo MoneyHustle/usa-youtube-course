@@ -9,44 +9,7 @@
     .hero .container {
         grid-template-columns: 1fr;
         gap: 40px;
-        
-    .mega-stats {
-        grid-template-columns: 1fr;
-        gap: 15px;
     }
-    
-    .mega-stat-card {
-        padding: 30px 15px;
-    }
-    
-    .stat-value {
-        font-size: 40px;
-    }
-    
-    .stat-unit {
-        font-size: 18px;
-    }
-    
-    .timeline-title {
-        font-size: 28px;
-    }
-    
-    .timeline-icon {
-        width: 80px;
-        height: 80px;
-        font-size: 32px;
-    }
-    
-    .btn-mega {
-        padding: 18px 30px;
-        font-size: 14px;
-    }
-    
-    .cta-pulse-ring {
-        width: 200px;
-        height: 200px;
-    }
-}
     
     .hero-title {
         font-size: 48px;
@@ -60,16 +23,23 @@
         font-size: 16px;
     }
     
+    /* Keep stats in ONE ROW - FIXED */
     .stats-row {
-        gap: 20px;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .stat-item {
+        text-align: center;
     }
     
     .stat-number {
-        font-size: 32px;
+        font-size: 28px !important;
     }
     
     .stat-label {
-        font-size: 12px;
+        font-size: 11px !important;
     }
     
     .cta-buttons {
@@ -101,87 +71,48 @@
         font-size: 16px;
     }
     
-    /* Pricing */
+    /* Pricing - Keep in 2 columns */
     .pricing-cards {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+    
+    .pricing-card {
+        padding: 25px 15px;
     }
     
     .card-title {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .amount {
-        font-size: 56px;
+        font-size: 48px;
     }
     
-    /* Learn Section */
+    .feature {
+        font-size: 13px;
+    }
+    
+    /* Learn Section - Keep 3 columns */
     .learn-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px;
+    }
+    
+    .learn-item {
+        padding: 25px 15px;
     }
     
     .learn-icon {
-        font-size: 48px;
-    }
-    
-    .learn-item h3 {
-        font-size: 20px;
-    }
-    
-    /* Revenue */
-    .revenue-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    /* Mega Stats */
-    .mega-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .stat-icon-large {
-        font-size: 48px;
-    }
-    
-    .stat-value {
-        font-size: 48px;
-    }
-    
-    .stat-icon-infinity {
-        font-size: 64px;
-    }
-    
-    /* Floating Cards */
-    .floating-cards-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    /* Timeline */
-    .timeline {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .timeline::before {
-        display: none;
-    }
-    
-    .timeline-icon {
-        width: 100px;
-        height: 100px;
         font-size: 40px;
     }
     
-    .timeline-content p {
-        max-width: 100%;
+    .learn-item h3 {
+        font-size: 16px;
     }
     
-    .btn-mega {
-        padding: 20px 40px;
-        font-size: 16px;
+    .learn-item p {
+        font-size: 12px;
     }
     
     /* Footer */
@@ -241,9 +172,19 @@
         padding: 10px 20px;
     }
     
+    /* Keep stats in ONE ROW on mobile */
     .stats-row {
-        flex-direction: column;
-        gap: 15px;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    .stat-number {
+        font-size: 22px !important;
+    }
+    
+    .stat-label {
+        font-size: 9px !important;
     }
     
     .section-title {
@@ -253,6 +194,12 @@
     .section-subtitle {
         font-size: 14px;
         margin-bottom: 40px;
+    }
+    
+    /* Pricing - Stack on small mobile */
+    .pricing-cards {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
     }
     
     .pricing-card {
@@ -272,8 +219,26 @@
         font-size: 14px;
     }
     
+    /* Learn Section - 2 columns on small mobile */
+    .learn-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+    
     .learn-item {
-        padding: 30px 20px;
+        padding: 20px 10px;
+    }
+    
+    .learn-icon {
+        font-size: 32px;
+    }
+    
+    .learn-item h3 {
+        font-size: 14px;
+    }
+    
+    .learn-item p {
+        font-size: 11px;
     }
     
     .youtube-icon-wrapper {
