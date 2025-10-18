@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Master YouTube with USA Full Course - 4 Hours of Pure Value! Get 200GB+ Premium Assets, CapCut Pro & More!">
     <title>USA FULL COURSE - YouTube Mastery 2025 🚀</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
@@ -19,6 +19,33 @@
         <div class="gradient-orb orb-3"></div>
     </div>
 
+    <!-- Animated Header -->
+    <header class="animated-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">🚀</div>
+                <div class="logo-text">
+                    <span class="usa-logo">USA</span>
+                    <span class="course-logo">CHANNEL</span>
+                </div>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#learn" class="nav-link">Learn</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <button class="header-cta" onclick="openModal('premium')">
+                <span class="cta-icon">💎</span>
+                <span>Get Premium</span>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line" id="scrollLine"></div>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -28,7 +55,7 @@
                     <span class="usa-text">USA</span> 
                     <span class="gradient-text">FULL COURSE</span>
                 </h1>
-                <p class="hero-subtitle">Master YouTube & Skyrocket Your Channel to <span class="highlight">18M+ Views</span></p>
+                <p class="hero-subtitle">Master YouTube & Skyrocket Your Channel to <span class="highlight">80K+ Views</span></p>
                 <p class="hero-description">
                     Transform Your YouTube Journey with Our Battle-Tested Strategies.<br>
                     <strong>4 Hours of Pure, Unfiltered Knowledge</strong> + Premium Tools Worth Thousands!
@@ -36,15 +63,15 @@
 
                 <div class="stats-row">
                     <div class="stat-item">
-                        <div class="stat-number">18M+</div>
+                        <div class="stat-number" data-target="80000">80K+</div>
                         <div class="stat-label">Total Views</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">4 Hrs</div>
+                        <div class="stat-number" data-target="4">4 Hrs</div>
                         <div class="stat-label">Content</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">500+</div>
+                        <div class="stat-number" data-target="80000">80K+</div>
                         <div class="stat-label">Students</div>
                     </div>
                 </div>
@@ -55,7 +82,7 @@
                         JOIN FREE MASTERCLASS
                     </button>
                     <button class="btn btn-premium" onclick="openModal('premium')">
-                        <span class="btn-icon">👑</span>
+                        <span class="btn-icon">💎</span>
                         GET PREMIUM - Rs. 499
                         <span class="btn-badge">BEST VALUE</span>
                     </button>
@@ -202,8 +229,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- FAQ Section -->
     <section class="faq" id="faq">
@@ -362,8 +387,8 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/form-handler.js"></script>
-    <script src="js/animations.js"></script>
+    <script src="main.js"></script>
+    <script src="form-handler.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
